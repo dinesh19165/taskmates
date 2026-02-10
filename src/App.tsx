@@ -13,11 +13,13 @@ import ViewInquiries from './pages/admin/ViewInquiries'
 import ProtectedRoute from './components/ProtectedRoute'
 import ScrollToTop from './components/ScrollToTop'
 import NotFound from './pages/NotFound'
+import WhatsAppButton from './components/WhatsAppButton'
 
 function App() {
     return (
         <Router>
             <ScrollToTop />
+            <WhatsAppButton />
             <Routes>
                 {/* Public Routes */}
                 <Route path="/" element={<MainLayout />}>
