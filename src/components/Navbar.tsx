@@ -28,11 +28,11 @@ const Navbar = () => {
                     ))}
                 </div>
 
-                <div className="hidden md:block">
+                <Link to="/admin/login" className="hidden md:block">
                     <button className="bg-dark text-white px-6 py-2 rounded-md font-bold hover:bg-primary transition-all uppercase tracking-widest text-xs">
                         Admin Portal
                     </button>
-                </div>
+                </Link>
 
                 {/* Mobile Toggle */}
                 <button

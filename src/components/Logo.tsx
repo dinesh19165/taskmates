@@ -11,13 +11,11 @@ const Logo: React.FC<LogoProps> = ({ variant = 'dark', className = '' }) => {
     const taglineColor = variant === 'light' ? 'text-gray-300' : 'text-gray-500';
 
     return (
-        <Link to="/" className={`flex items-center gap-3 group ${className}`}>
+        <Link to="/" className={`flex items-center gap-1.5 md:gap-3 group whitespace-nowrap ${className}`}>
             {/* Official Logo Icon Recreated with SVG */}
             <svg
-                width="48"
-                height="48"
                 viewBox="0 0 100 100"
-                className="w-10 h-10 md:w-12 md:h-12 drop-shadow-sm"
+                className="w-8 h-8 md:w-12 md:h-12 drop-shadow-sm"
             >
                 <rect x="15" y="15" width="70" height="70" rx="12" fill="none" stroke="#2D2D2D" strokeWidth="12" className="opacity-10" />
                 {/* Top Half - Light Blue */}
@@ -39,15 +37,15 @@ const Logo: React.FC<LogoProps> = ({ variant = 'dark', className = '' }) => {
             </svg>
 
             <div className="flex flex-col">
-                <div className="flex items-baseline gap-1.5">
-                    <span className={`text-lg md:text-xl font-black ${textColor} leading-none tracking-tight uppercase`}>
+                <div className="flex items-baseline gap-1 md:gap-1.5">
+                    <span className={`text-[13px] md:text-xl font-black ${textColor} leading-none tracking-tight uppercase`}>
                         Task Support
                     </span>
-                    <span className="text-lg md:text-xl font-black text-accent leading-none tracking-tight uppercase">
+                    <span className="text-[13px] md:text-xl font-black text-accent leading-none tracking-tight uppercase">
                         Solutions
                     </span>
                 </div>
-                <span className={`text-[8px] md:text-[9px] font-bold ${taglineColor} tracking-[0.4em] uppercase mt-1`}>
+                <span className={`text-[7px] md:text-[9px] font-bold ${taglineColor} tracking-[0.2em] md:tracking-[0.4em] uppercase mt-0.5 md:mt-1`}>
                     Meet All Your Needs
                 </span>
             </div>

@@ -136,7 +136,7 @@ const Services = () => {
                             <X size={24} />
                         </button>
 
-                        <div className="md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+                        <div className="md:w-1/2 min-h-[300px] md:h-auto relative overflow-hidden">
                             <img
                                 src={selectedService.image}
                                 alt={selectedService.name}
@@ -189,25 +189,33 @@ const Services = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-auto p-6 bg-gray-50 flex items-center justify-between border-t border-gray-100">
-                                <div className="flex items-center gap-4">
+                            <div className="mt-auto p-6 bg-gray-50 flex flex-col sm:flex-row items-center justify-between border-t border-gray-100 gap-6">
+                                <div className="flex items-center gap-4 w-full sm:w-auto">
                                     <div className="p-3 bg-white rounded-xl shadow-sm text-primary">
                                         <Clock size={20} />
                                     </div>
-                                    <div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-secondary opacity-60">Avg. Response Time</p>
-                                        <p className="text-dark font-black">2 Hours</p>
+                                    <div className="flex flex-col">
+                                        <p className="text-[10px] font-black uppercase tracking-widest text-secondary opacity-60 leading-none mb-1">Avg. Response Time</p>
+                                        <p className="text-dark font-black text-lg leading-none">2 Hours</p>
                                     </div>
                                 </div>
-                                <button
-                                    onClick={() => {
-                                        closeModal();
-                                        navigate('/contact');
-                                    }}
-                                    className="bg-primary text-white px-8 py-3 rounded-xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-dark transition-all shadow-xl"
-                                >
-                                    Inquire Now
-                                </button>
+                                <div className="flex items-center gap-3 w-full sm:w-auto">
+                                    <button
+                                        onClick={closeModal}
+                                        className="flex-1 sm:flex-none border-2 border-dark text-dark px-8 py-3 rounded-xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-dark hover:text-white transition-all"
+                                    >
+                                        Exit
+                                    </button>
+                                    <button
+                                        onClick={() => {
+                                            closeModal();
+                                            navigate('/contact');
+                                        }}
+                                        className="flex-1 sm:flex-none bg-primary text-white px-8 py-3 rounded-xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-dark transition-all shadow-xl"
+                                    >
+                                        Inquire Now
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
